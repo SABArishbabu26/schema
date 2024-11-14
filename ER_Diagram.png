@@ -1,0 +1,26 @@
+digraph ER_Diagram {
+	rankdir=LR size="8,5"
+	Customer [label="Customer
+
+Customer_ID (PK)
+Name
+Age
+Account_Balance
+Monthly_Spending
+Investment_Portfolio_Value
+Credit_Score
+Loan_Amount
+Risk_Score
+Predicted_Risk
+Engagement_Score
+Profitability_Score" fillcolor=lightblue shape=rectangle style=filled]
+	Credit_Card [label="Credit_Card
+
+Card_Name (Unique)
+Main_Features
+Annual_Fee
+APR
+Eligibility" fillcolor=lightgreen shape=rectangle style=filled]
+	Customer -> Credit_Card [label="Eligibility Requirement" color=black dir=none style=dashed]
+	Customer -> Credit_Card [label="Card Ownership" arrowhead=crow arrowtail=crow color=black]
+}
